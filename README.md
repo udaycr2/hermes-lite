@@ -307,7 +307,7 @@ Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu/hermes-lite
 Environment=TELEGRAM_BOT_TOKEN=***
-Environment=TELEGRAM_ADMIN_ID=272862181
+Environment=TELEGRAM_ADMIN_ID=***
 ExecStart=/home/ubuntu/hermes-lite/venv/bin/python telegram_bot.py
 Restart=on-failure
 RestartSec=10
