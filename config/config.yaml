@@ -2,7 +2,7 @@
 # Optimized for weak hardware (Ampere instance) with minimal context
 
 model:
-  default: "granite4.1:3b"
+  default: "granite4:350m-h"
   provider: "ollama"
   base_url: "http://localhost:11434/v1"
   # Low context for weak hardware

@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/*.log
+
+# Test files
+test_*.txt
+test_*.py
+
+# Runtime data
+sessions/*.json
+memory/agent_memory.json
+cron/jobs.json
+
+# Config (secrets)
+.env
+config/telegram_config.json
