@@ -1,0 +1,122 @@
+# Hermes Lite - Lightweight Configuration
+# Optimized for weak hardware (Ampere instance) with minimal context
+
+model:
+  default: "granite4.1:3b"
+  provider: "ollama"
+  base_url: "http://localhost:11434/v1"
+  # Low context for weak hardware
+  context_length: 4096
+  max_tokens: 1024
+  temperature: 0.3
+  top_p: 0.9
+  # Disable reasoning for speed
+  reasoning_effort: false
+
+agent:
+  max_turns: 10
+  verbose: false
+  # Minimal context - only essential context
+  max_context_tokens: 2048
+  # Disable verbose reasoning
+  reasoning_effort: false
+  # Keep personality minimal
+  personality: "technical"
+
+# Minimal toolset - only what you need
+tools:
+  enabled:
+    - "terminal"
+    - "web_search"
+    - "file"
+    - "cronjob"
+    - "session_search"
+    - "memory"
+  # Disable all heavy features
+  disabled:
+    - "skills"
+    - "memory_manager"
+    - "learning"
+    - "context_compression"
+    - "conversation_compression"
+    - "trajectory_compression"
+    - "skills_bundle"
+    - "learning_graph"
+    - "memory_manager"
+    - "plugin_system"
+    - "gateway"
+    - "gateway"
+    - "web_ui"
+    - "tui"
+    - "voice"
+    - "audio"
+    - "image_gen"
+    - "video_gen"
+    - "mcp"
+    - "acp"
+    - "coding_agents"
+    - "agent_browser"
+
+# Minimal memory - only essential
+memory:
+  enabled: true
+  max_entries: 50
+  max_chars: 5000
+  # Disable learning
+  learning_enabled: false
+  # Minimal persistence
+  persist_interval: 300
+
+# Minimal context settings
+context:
+  max_tokens: 2048
+  max_turns: 5
+  compression_enabled: false
+  compression_threshold: 0
+  summary_model: null
+
+# Disable all heavy features
+features:
+  prompt_caching: false
+  context_compression: false
+  conversation_compression: false
+  trajectory_compression: false
+  learning_enabled: false
+  skills_enabled: false
+  plugins_enabled: false
+  mcp_enabled: false
+  gateway_enabled: false
+  web_ui_enabled: false
+  tui_enabled: false
+  voice_enabled: false
+  audio_enabled: false
+  image_gen_enabled: false
+  video_gen_enabled: false
+  coding_agents_enabled: false
+
+# Minimal logging
+logging:
+  level: "WARNING"
+  file: "logs/hermes-lite.log"
+  max_size_mb: 10
+  backup_count: 2
+
+# Cron settings
+cron:
+  enabled: true
+  max_jobs: 10
+  check_interval: 60
+
+# Network settings
+network:
+  timeout: 30
+  max_retries: 2
+  retry_delay: 2
+
+# Performance settings
+performance:
+  max_context_tokens: 2048
+  max_turns: 10
+  max_tool_calls_per_turn: 3
+  timeout_seconds: 60
+  max_tokens_per_response: 1024

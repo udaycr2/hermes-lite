@@ -1,0 +1,15 @@
+{
+  "name": "User",
+  "role": "Technical Expert / Linux Admin",
+  "preferences": {
+    "communication_style": "concise, technical, direct",
+    "tools_preferred": ["terminal", "web_search", "file", "cronjob"],
+    "no_fluff": true,
+    "no_examples_unless_asked": true
+  },
+  "hardware": {
+    "platform": "Ampere (ARM)",
+    "constraints": "weak CPU, limited RAM, slow inference",
+    "optimization": "minimal context, few tools, low tokens"
+  }
+}
