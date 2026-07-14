@@ -1,6 +1,6 @@
 # Hermes Lite - Lightweight AI Agent
 
-A minimal, efficient AI agent optimized for weak hardware (Ampere ARM instances). Built by stripping down Hermes to essentials: 6 tools, native function calling, streaming responses, and full Telegram integration.
+A minimal, efficient AI agent optimized for weak hardware. Built by stripping down Hermes to essentials: 6 tools, native function calling, streaming responses, and full Telegram integration.
 
 ---
 
